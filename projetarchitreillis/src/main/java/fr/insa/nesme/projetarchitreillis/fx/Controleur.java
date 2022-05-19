@@ -304,8 +304,6 @@ public class Controleur {
                 treillis.ajouteNoeud(appuiSimple);
                 this.mainPane.redraw();
                 break;
-            case 7:
-                break;
             default:
                 throw new AssertionError();
         }

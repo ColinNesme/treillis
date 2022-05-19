@@ -96,6 +96,18 @@ public class Treillis {
             listNoeuds.add(n);
         }
     }
+    
+    public void supprimeNoeud(Noeud n) {
+        if (!listNoeuds.contains(n)) {
+            throw new IllegalStateException();
+        }else{
+            listNoeuds.remove(n);
+            for (Barre b:n.barresIncidentes()) {
+                supprimeBarre(b);
+            }
+        }
+    }
+    
 
     public void ajouteBarre(Barre b) {
         if (listBarres.contains(b))
@@ -117,6 +129,16 @@ public class Treillis {
             listBarres.add(b);
         }
     }
+    
+    public void supprimeBarre(Barre b) {
+        if (!listBarres.contains(b)) {
+            throw new IllegalStateException();
+        } else {
+            listBarres.remove(b);
+        }
+        
+    }
+    
 
     public Noeud choisiNoeud() {
         System.out.println("liste des noeuds disponibles : ");

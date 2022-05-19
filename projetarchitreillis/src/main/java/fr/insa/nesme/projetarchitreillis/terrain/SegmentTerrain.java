@@ -106,8 +106,8 @@ public class SegmentTerrain{
         double long2 = e1x * e1x + e1y * e1y;
         rep[0] = v1.getPx() + (scal * e1x) / long2;//x du proj
         rep[1] = v1.getPy() + (scal * e1y) / long2;//y du proj
-        /*double a=(v2.getPy()-v1.getPy())/(v2.getPx()-v1.getPx());
-        double b=-a*v1.getPx()+v1.getPy();*/
+        
+        //si le projet est hors du segment, on le met sur le sommet le plus proche
         double maxX = 0;
         double maxY = 0;
         double minX = 0;
